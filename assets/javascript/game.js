@@ -20,12 +20,12 @@ console.log(word)
 var remainingLives = document.getElementById("remaining-lives")
 var winsText = document.getElementById("wins-text")
 var lossesText = document.getElementById("losses-text")
-var userChoice = document.getElementById("user-choice")
+
 
 console.log(remainingLives)
 console.log(winsText)
 console.log(lossesText)
-console.log(userChoice)
+
 
 // Update clue to reflect number of characters in word
 
@@ -46,25 +46,31 @@ console.log(remainingLetters)
         var userGuess = event.key.toLowerCase();
         console.log(userGuess)
 
-        document.write(answer.join(" "));
+        // document.write(answer.join(" "));
 
-        for (var j = 0; j <word.length; j++) {
+        // If key is correct show display character
+
+        for (var j = 0; j < word.length; j++) {
             if (word[j] === userGuess) {
                 answer[j] = userChoice;
                 remainingLetters--;
+                var userChoice = document.getElementById("user-choice");
+                console.log(userChoice)
+            
+                // If key is incorrect subtract one from remainingLives
+            } else {
+                remainingLives--;
+                // If key is incorrect display character under incorrect guesses
+
             }
-        }
+            }
+
    }
 
 
-// If key is correct show display character
 
 
-        
 
-// If key is incorrect display character under incorrect guesses
-
-// If key is incorrect subtract one from remainingGuesses
 
 
 // If that key was incorrect show the letter and minus one from remaining guesses
