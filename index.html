@@ -9,45 +9,51 @@
     <!-- CSS -->
 
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 
 
     <!-- JavaScript -->
 
-    <script src="assets/javascript/game.js"></script>
+   
     
 </head>
 <body>
-    <header>Harry Potter Word Guess</header>
-    <p>Figure out the word before the alloated amount of guesses is up. Press any key to get started!</p>
+    <header>Harry Potter Hangman</header>
+    <p>How well do you know your Wizarding World terminology?<br>Guess the word before your life potion is gone.<br>Press any key to get started!</p>
 
-    <!-- Displays current word, guesses remaining, and characters guessed -->
+    <!-- Displays current word -->
     <section>
         <div>
             <h1>Current word</h1>
+            <p id="user-choice"></p>
         </div>
+    </section>
 
+     <!-- Displays remaining amount of life left and characters guessed -->
+    <section>
         <div>
-            <h1>Guesses remaining</h1>
+            <h2>Remaining guesses</h2>
             <p id="remaining-lives"></p>
         </div>
         <div>
-            <h1>Letters guessed</h1>
-            <p id="user-choice"></p>
+            <h2>Incorrect letters guessed</h2>
+            <p id="letters-guessed"></p>
         </div>
     </section>
 
     <!-- Displays wins and loses -->
     <section>
-        <div>
-            <h1>Wins</h1>
+        <div id="wins">
+            <h2>Wins</h2>
             <p id="wins-text"></p>
         </div>
-        <div>
-            <h1>Losses</h1>
+        <div id="losses">
+            <h2>Losses</h2>
             <p id="losses-text"></p>
         </div>
     </section>
-
+    <script src="assets/javascript/game.js"></script>
     
 </body>
 </html>
